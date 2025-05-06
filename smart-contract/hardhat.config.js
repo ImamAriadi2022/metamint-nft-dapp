@@ -1,11 +1,11 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config();
+require('@nomiclabs/hardhat-ethers');
+require('dotenv').config();
 
 module.exports = {
-  solidity: "0.8.9",
+  solidity: "0.8.20",
   networks: {
-    goerli: {
-      url: process.env.GOERLI_RPC_URL,
+    localhost: {
+      url: "http://127.0.0.1:8545",
       accounts: [process.env.PRIVATE_KEY],
     },
   },
